@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="gambar.png" alt="BMI Image" class="bmi-image">
+            <div class="header-text">
+                <h1>Kalkulator BMI</h1>
+                <p>BMI (Indeks Massa Tubuh) adalah cara yang umum digunakan untuk menilai apakah seseorang memiliki berat badan yang sehat berdasarkan tinggi badan. Mengetahui nilai BMI Anda dapat membantu Anda memahami kesehatan dan kebugaran Anda.</p>
+            </div>
+        </div>
+
+        <form id="bmiForm">
+            <div class="input-group gender-selection">
+                <label>Jenis Kelamin:</label>
+                <div>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">
+                        <img src="hamas.png" alt="Laki-laki" class="gender-icon"> Laki-laki
+                    </label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">
+                        <img src="hamasversicewe.png".png" alt="Perempuan" class="gender-icon"> Perempuan
+                    </label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="height">Tinggi Badan (cm):</label>
+                <input type="number" id="height" required placeholder="Mis: 170">
+            </div>
+
+            <div class="input-group">
+                <label for="weight">Berat Badan (kg):</label>
+                <input type="number" id="weight" required placeholder="Mis: 65">
+            </div>
+
+            <button type="button" onclick="calculateBMI()">Hitung BMI</button>
+        </form>
+
+        <div id="result" class="result"></div>
+        
+        <h2>Kategori BMI</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rentang BMI</th>
+                    <th>Kategori</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Kurang dari 18.5</td>
+                    <td>Kekurangan berat badan</td>
+                </tr>
+                <tr>
+                    <td>18.5 - 24.9</td>
+                    <td>Normal (ideal)</td>
+                </tr>
+                <tr>
+                    <td>25.0 - 29.9</td>
+                    <td>Kelebihan berat badan</td>
+                </tr>
+                <tr>
+                    <td>30.0 dan lebih</td>
+                    <td>Kegemukan (Obesitas)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="additional-info">
+            <h2>Informasi Tambahan</h2>
+            <p>BMI bukanlah satu-satunya ukuran kesehatan. Ada faktor lain yang penting untuk dipertimbangkan, seperti komposisi tubuh, distribusi lemak, dan gaya hidup. Selalu konsultasikan dengan profesional kesehatan untuk evaluasi yang lebih lengkap.</p>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Kalkulator BMI. Dapatkan konsultasi kesehatan yang tepat untuk kesehatan terbaik Anda.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
